@@ -1,11 +1,15 @@
 var colorBoxes = document.querySelectorAll(".square")
 var hexes = document.querySelectorAll(".hex")
 var newButton = document.querySelector(".new-palette")
-
+var squareOne = document.getElementById("color-one")
+var squareTwo = document.getElementById("color-two")
+var squareThree = document.getElementById("color-three")
+var squareFour = document.getElementById("color-four")
+var squareFive = document.getElementById("color-five")
 var hex = ["A", "B", "C", "D", "E", "F", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 
-newButton.addEventListener("click", changeColor)
-window.addEventListener("load", changeColor)
+newButton.addEventListener("click", changeAllColors)
+window.addEventListener("load", changeAllColors)
 
 
 
@@ -34,15 +38,23 @@ window.addEventListener("load", changeColor)
 
  class Palette {
    constructor() {
-     this.colors = [new Color, new Color, new Color, new Color, new Color]
    };
  };
 
+ // this.colors = [new Color, new Color, new Color, new Color, new Color]
 
-function changeColors() {
-
+function changeColors(element) {
+  var newColor = new Color
+element.style.backgroundColor = newColor.hex
 };
 
+function changeAllColors() {
+  changeColors(squareOne)
+  changeColors(squareTwo)
+  changeColors(squareThree)
+  changeColors(squareFour)
+  changeColors(squareFive)
+}
 
 // var newPalette = new Palette;
 // colorBoxes[i].style.backgroundColor = newPalette.colors[i].hex;
