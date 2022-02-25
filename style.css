@@ -7,7 +7,7 @@
 header {
   text-align: center;
   height: 140px;
-  width: 950px;
+  width: 900px;
   font-size: 44px;
   padding-top: 60px;
 }
@@ -21,6 +21,11 @@ main {
 img {
   width: 25px;
   height: 25px;
+}
+
+h1{
+  margin: 20px;
+  text-align: center;
 }
 
 .color-palette {
@@ -59,16 +64,29 @@ img {
 .side-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
   height: 100vh;
   margin-top: -400px;
   padding-top: 80px;
-  padding-right: 150px;
-  padding-left: 150px;
+  /* padding-right: 150px;
+  padding-left: 150px; */
   border-left: solid 3px black;
 }
 
 .mini-square {
-  height: 20px;
-  width: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+}
+
+.test {
+  width: 400px;
+}
+
+.flexSquares {
+  display: inline-flex;
 }

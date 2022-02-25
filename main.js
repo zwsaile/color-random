@@ -57,7 +57,6 @@ function changeColors(element, hexCode) {
   var newColor = new Color
 element.style.backgroundColor = newColor.hex
 hexCode.innerText = newColor.hex
-console.log()
 };
 
 function changeAllColors() {
@@ -71,11 +70,11 @@ function addSavedPalette() {
   savedPalettes.push(new Palette)
   var miniSquareSection = document.querySelector(".mini-square")
   var addHTML = '';
-  for(var i = 0; i > savedPalettes.length; i++) {
+  for(var i = 0; i < savedPalettes.length; i++) {
     addHTML += `
-   <p class="mini-color" ${style.backgroundColor=objectvalue[i]}></p><p class="mini-color"></p><p class="mini-color"></p><p class="mini-color"></p><p class="mini-color"></p>`
- } miniSquareSection.innerHTML = addHTML;
-  console.log(savedPalettes)
+    <div class="flexSquares"><p id="mini-color-one" class="mini-square"></p><p id="mini-color-two" class="mini-square"></p><p id="mini-color-three" class="mini-square"></p><p id="mini-color-four" class="mini-square"></p><p id="mini-color-five" class="mini-square"></p><img src="https://cdn-icons-png.flaticon.com/512/1345/1345823.png" alt="Trashcan"/></div>`
+  } miniSquareSection.innerHTML = addHTML;
+  console.log(addHTML)
 
 }
 
