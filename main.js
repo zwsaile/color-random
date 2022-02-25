@@ -19,7 +19,7 @@ var hex = ["A", "B", "C", "D", "E", "F", "1", "2", "3", "4", "5", "6", "7", "8",
 newButton.addEventListener("click", changeAllColors)
 savePaletteButton.addEventListener("click", function() {
  addSavedPalette()
- changeAllColors()
+ // changeAllColors()
 });
 window.addEventListener("load", changeAllColors)
 
@@ -69,18 +69,12 @@ function addSavedPalette() {
    for(var i = 0; i < savedPalettes.length; i++) {
     addHTML += `
     <div class="flexSquares">
-    <p id="mini-color-one" class="mini-square">${savedPalettes[i].colorOne}</p>
-    <p id="mini-color-two" class="mini-square">${savedPalettes[i].colorTwo}</p>
-    <p id="mini-color-three" class="mini-square">${savedPalettes[i].colorThree}</p>
-    <p id="mini-color-four" class="mini-square">${savedPalettes[i].colorFour}</p>
-    <p id="mini-color-five" class="mini-square">${savedPalettes[i].colorFive}</p>
+    <p id="mini-color-one" class="mini-square" style="background-color:${savedPalettes[i].colorOne}"></p>
+    <p id="mini-color-two" class="mini-square" style="background-color:${savedPalettes[i].colorTwo}"></p>
+    <p id="mini-color-three" class="mini-square" style="background-color:${savedPalettes[i].colorThree}"></p>
+    <p id="mini-color-four" class="mini-square" style="background-color:${savedPalettes[i].colorFour}"></p>
+    <p id="mini-color-five" class="mini-square" style="background-color:${savedPalettes[i].colorFive}"></p>
     <img src="https://cdn-icons-png.flaticon.com/512/1345/1345823.png" alt="Trashcan"/></div>`
   };
   miniSquareSection.innerHTML = addHTML;
 };
-//  currentPalette = new Palette (
-//    square1.colorOne,
-//    square2.colorTwo,
-//    square3.style.backgroundColor,
-//    square4.style.backgroundColor,
-//    square5.style.backgroundColor)
