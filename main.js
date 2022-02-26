@@ -14,14 +14,16 @@ var hexTwo = document.getElementById("hex-two")
 var hexThree = document.getElementById("hex-three")
 var hexFour = document.getElementById("hex-four")
 var hexFive = document.getElementById("hex-five")
+var miniTrash = document.getElementById("mini-trash")
 var hex = ["A", "B", "C", "D", "E", "F", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 
 newButton.addEventListener("click", changeAllColors)
 savePaletteButton.addEventListener("click", function() {
  addSavedPalette()
+ changeAllColors()
 });
- // changeAllColors()
 window.addEventListener("load", changeAllColors)
+
 
 class Color {
   constructor() {
@@ -66,6 +68,10 @@ function changeAllColors() {
 };
 function addSavedPalette() {
   savedPalettes.push(new Palette)
+  displayPalettes()
+};
+
+function displayPalettes() {
   var addHTML = '';
    for(var i = 0; i < savedPalettes.length; i++) {
     addHTML += `
@@ -86,4 +92,5 @@ function deletePalette(id) {
       savedPalettes.splice(i, 1);
     };
   };
+  displayPalettes()
 };
