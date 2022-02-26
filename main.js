@@ -19,8 +19,8 @@ var hex = ["A", "B", "C", "D", "E", "F", "1", "2", "3", "4", "5", "6", "7", "8",
 newButton.addEventListener("click", changeAllColors)
 savePaletteButton.addEventListener("click", function() {
  addSavedPalette()
- // changeAllColors()
 });
+ // changeAllColors()
 window.addEventListener("load", changeAllColors)
 
 class Color {
@@ -47,6 +47,7 @@ class Palette {
     this.colorThree = hexThree.innerText
     this.colorFour = hexFour.innerText
     this.colorFive = hexFive.innerText
+    this.id = 0;
   };
 };
  // this.colors = [new Color, new Color, new Color, new Color, new Color]
@@ -74,7 +75,15 @@ function addSavedPalette() {
     <p id="mini-color-three" class="mini-square" style="background-color:${savedPalettes[i].colorThree}"></p>
     <p id="mini-color-four" class="mini-square" style="background-color:${savedPalettes[i].colorFour}"></p>
     <p id="mini-color-five" class="mini-square" style="background-color:${savedPalettes[i].colorFive}"></p>
-    <img src="https://cdn-icons-png.flaticon.com/512/1345/1345823.png" alt="Trashcan"/></div>`
+    <img onclick='deletePalette(this.id)' id="${savedPalettes[i].id += 1}" class="mini-square" src="https://cdn-icons-png.flaticon.com/512/1345/1345823.png" alt="Trashcan"/></div>`
   };
   miniSquareSection.innerHTML = addHTML;
+};
+
+function deletePalette(id) {
+  for (var i = 0; i < savedPalettes.length; i++) {
+    if (id == savedPalettes[i].id) {
+      savedPalettes.splice(i, 1);
+    };
+  };
 };
