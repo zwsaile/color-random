@@ -1,6 +1,8 @@
 var savedPalettes = []
 var colorBoxes = document.querySelectorAll(".square")
+var colorPalette = document.querySelector(".color-palette")
 var hexes = document.querySelectorAll(".hex")
+var unlock = document.querySelectorAll(".unlock-image")
 var newButton = document.querySelector(".new-palette")
 var savePaletteButton = document.querySelector(".save-palette")
 var miniSquareSection = document.querySelector(".mini-square")
@@ -23,6 +25,12 @@ savePaletteButton.addEventListener("click", function() {
  changeAllColors()
 });
 window.addEventListener("load", changeAllColors)
+
+colorPalette.addEventListener("click", function() {
+  if (event.target.src !== "./assets/padlock.png") {
+    event.target.src = "./assets/padlock.png";
+  }
+})
 
  // this.colors = [new Color, new Color, new Color, new Color, new Color]
 function changeColors(element, hexCode) {
