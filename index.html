@@ -13,28 +13,33 @@
       <section class="color-palette">
         <div class="color">
           <p id="color-one" class="square"></p>
-          <p id="hex-one"class="hex"></p>
-          <img src="https://cdn-icons.flaticon.com/png/512/798/premium/798131.png?token=exp=1645727742~hmac=a64a60b84a6148d0caa2dbe36f1f3538" alt="unlocked">
+          <p id="hex-one" class="hex"></p>
+          <img class="lock-image hidden" src="./assets/padlock.png" alt="locked">
+          <img class="unlock-image" src="./assets/unlock-padlock.png" alt="unlocked">
         </div>
         <div class="color">
           <p id="color-two" class="square"></p>
-          <p id="hex-two"class="hex"></p>
-          <img src="data:image/png;base64,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" alt="unlocked">
+          <p id="hex-two" class="hex"></p>
+          <img class="lock-image hidden" src="./assets/padlock.png" alt="locked">
+          <img class="unlock-image" src="./assets/unlock-padlock.png" alt="unlocked">
         </div>
         <div class="color">
           <p id="color-three" class="square"></p>
-          <p id="hex-three"class="hex"></p>
-          <img src="https://cdn-icons.flaticon.com/png/512/798/premium/798131.png?token=exp=1645727742~hmac=a64a60b84a6148d0caa2dbe36f1f3538" alt="unlocked">
+          <p id="hex-three" class="hex"></p>
+          <img class="lock-image hidden" src="./assets/padlock.png" alt="locked">
+          <img class="unlock-image" src="./assets/unlock-padlock.png" alt="unlocked">
         </div>
         <div class="color">
           <p id="color-four" class="square"></p>
           <p id="hex-four"class="hex"></p>
-          <img src="https://cdn-icons.flaticon.com/png/512/798/premium/798131.png?token=exp=1645727742~hmac=a64a60b84a6148d0caa2dbe36f1f3538" alt="unlocked">
+          <img class="lock-image hidden" src="./assets/padlock.png" alt="locked">
+          <img class="unlock-image"src="./assets/unlock-padlock.png" alt="unlocked">
         </div>
         <div class="color">
           <p id="color-five" class="square"></p>
           <p id="hex-five"class="hex"></p>
-          <img src="https://cdn-icons.flaticon.com/png/512/798/premium/798131.png?token=exp=1645727742~hmac=a64a60b84a6148d0caa2dbe36f1f3538" alt="unlocked">
+          <img class="lock-image hidden" src="./assets/padlock.png" alt="locked">
+          <img class="unlock-image" src="./assets/unlock-padlock.png" alt="unlocked">
         </div>
       </section>
       <section class="side-content">
@@ -50,5 +55,7 @@
       <h3 class="save-palette">Save Palette</h3>
     </section>
 	<script src="main.js"></script>
+  <script src="palette.js"></script>
+  <script src="color.js"></script>
   </body>
 </html>

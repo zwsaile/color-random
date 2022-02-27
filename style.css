@@ -90,3 +90,7 @@ h1{
 .flexSquares {
   display: inline-flex;
 }
+
+.hidden {
+  display: none !important;
+}
