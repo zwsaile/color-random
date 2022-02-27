@@ -24,34 +24,6 @@ savePaletteButton.addEventListener("click", function() {
 });
 window.addEventListener("load", changeAllColors)
 
-
-class Color {
-  constructor() {
-     this.hex = this.getRandomHex(hex);
-     this.locked = false;
-     this.id = Date.now();
- };
-  getRandomHex(hex) {
-     var randomHex = [];
-     for (var i = 0; i < 6; i++) {
-       var hexDigit = hex[Math.floor((Math.random() * hex.length))];
-       randomHex.push(hexDigit);
-     };
-     var newRandomHex = randomHex.join("");
-     return `#${newRandomHex}`;
- };
-};
-
-class Palette {
-  constructor() {
-    this.colorOne = hexOne.innerText
-    this.colorTwo = hexTwo.innerText
-    this.colorThree = hexThree.innerText
-    this.colorFour = hexFour.innerText
-    this.colorFive = hexFive.innerText
-    this.id = 0;
-  };
-};
  // this.colors = [new Color, new Color, new Color, new Color, new Color]
 function changeColors(element, hexCode) {
   var newColor = new Color
@@ -81,7 +53,7 @@ function displayPalettes() {
     <p id="mini-color-three" class="mini-square" style="background-color:${savedPalettes[i].colorThree}"></p>
     <p id="mini-color-four" class="mini-square" style="background-color:${savedPalettes[i].colorFour}"></p>
     <p id="mini-color-five" class="mini-square" style="background-color:${savedPalettes[i].colorFive}"></p>
-    <img onclick='deletePalette(this.id)' id="${savedPalettes[i].id += 1}" class="mini-square" src="https://cdn-icons-png.flaticon.com/512/1345/1345823.png" alt="Trashcan"/></div>`
+    <img onclick='deletePalette(this.id)' id="${savedPalettes[i].id += 1}" class="mini-square" src="./assets/trash.png" alt="Trashcan"/></div>`
   };
   miniSquareSection.innerHTML = addHTML;
 };
