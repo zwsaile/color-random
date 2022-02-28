@@ -30,9 +30,8 @@ colorPalette.addEventListener("click", function() {
   if (event.target.src !== "./assets/padlock.png") {
     event.target.src = "./assets/padlock.png";
   }
-})
+});
 
- // this.colors = [new Color, new Color, new Color, new Color, new Color]
 function changeColors(element, hexCode) {
   var newColor = new Color
     element.style.backgroundColor = newColor.hex

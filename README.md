@@ -8,8 +8,8 @@
 - [Deploy Link](#deploy-link)
 
 #### About the Project
-Its got random colors
-
+This is our random color palette project.
+You're able to generate random colors for each of the 5 positions of the color palette and save if needed.
 
 #### Contributors
  - Daniel Neer
@@ -22,7 +22,9 @@ Its got random colors
 - CSS
 
 #### Instructions on Use
--
+- Click new palette to generate a new random color palette with 5 colors.
+- Click save palette to save your current 5 color palette
+- If you want to remove a saved palette click on the trash can to delete the selected palette.
 
 #### Deploy Link
- [Click Here For Random Colors](https:)
+ [Click Here For Random Colors](https://zwsaile.github.io/color-random/)
