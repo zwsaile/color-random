@@ -7,6 +7,7 @@ var square = document.querySelectorAll(".square")
 var hexCodes = document.querySelectorAll(".hex")
 var miniTrash = document.getElementById("mini-trash")
 var unlock = document.querySelectorAll(".unlock-image")
+var lock = document.querySelectorAll(".lock-image")
 var hex = ["A", "B", "C", "D", "E", "F", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 var currentPalette = [];
 
@@ -16,7 +17,9 @@ savePaletteButton.addEventListener("click", function() {
  changeAllColors()
 });
 window.addEventListener("load", changeAllColors)
-colorPalette.addEventListener("click", changeLockIcon);
+colorPalette.addEventListener("click", function(event) {
+  changeLockIcon(event);
+});
 
 function changeColors() {
   var newPalette = [];
@@ -47,7 +50,7 @@ function displayPalettes() {
     <p id="mini-color-three" class="mini-square" style="background-color:${savedPalettes[i].colorThree}"></p>
     <p id="mini-color-four" class="mini-square" style="background-color:${savedPalettes[i].colorFour}"></p>
     <p id="mini-color-five" class="mini-square" style="background-color:${savedPalettes[i].colorFive}"></p>
-    <img onclick='deletePalette(this.id)' id="${savedPalettes[i].id += 1}" class="mini-square" src="./assets/trash.png" alt="Trashcan"/></div>`
+    <img onclick='deletePalette(this.id)' id="${savedPalettes[i].id += 1}" class="mini-square-trash" src="./assets/trash.png" alt="Trashcan"/></div>`
   };
   miniSquareSection.innerHTML = addHTML;
 };
@@ -66,8 +69,8 @@ function deletePalette(id) {
   displayPalettes()
 };
 
-function changeLockIcon() {
-  if (event.target.src !== "./assets/padlock.png") {
-    event.target.src = "./assets/padlock.png";
+function changeLockIcon(event) {
+  if (event.target.src === "./assets/unlock-padlock.png") {
+    event.target.src = "./padlock.png"
   }
 }

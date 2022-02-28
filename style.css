@@ -1,15 +1,20 @@
 * {
   margin: 0px;
   padding: 0px;
-  /* border: solid 1px blue; */
+}
+
+body {
+  background-color: #f2f2f2;
 }
 
 header {
   text-align: center;
   height: 140px;
-  width: 900px;
-  font-size: 44px;
+  width: 975px;
+  font-size: 80px;
   padding-top: 60px;
+  font-family: "Century Gothic", monospace;
+  font-weight: bold;
 }
 
 main {
@@ -28,6 +33,18 @@ h1{
   text-align: center;
 }
 
+button {
+  height: 40px;
+  width: 150px;
+  font-size: 20px;
+  border: 2px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #ffffff;
+  font-family: monospace;
+  font-weight: bold;
+}
+
 .color-palette {
   display: flex;
   justify-content: space-between;
@@ -43,7 +60,9 @@ h1{
 }
 
 .hex {
+  font-size: 20px;
   height: 40px;
+  margin-left: 37px;
 }
 
 .buttons {
@@ -67,10 +86,8 @@ h1{
   flex-wrap: wrap;
   align-items: center;
   height: 100vh;
-  margin-top: -400px;
+  margin-top: -430px;
   padding-top: 80px;
-  /* padding-right: 150px;
-  padding-left: 150px; */
   border-left: solid 3px black;
 }
 
@@ -83,8 +100,18 @@ h1{
   margin: 10px;
 }
 
-.test {
-  width: 400px;
+.mini-square-trash {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.side-section-flex {
+  width: 425px;
 }
 
 .flexSquares {
@@ -93,4 +120,15 @@ h1{
 
 .hidden {
   display: none !important;
+}
+
+.lock-image,
+.unlock-image {
+ padding-left: 65px;
+}
+
+.saved-header {
+  font-size: 30px;
+  font-family: "Century Gothic",monospace;
+  font-weight: bold;
 }
