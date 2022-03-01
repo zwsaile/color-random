@@ -4,7 +4,7 @@
 - [About the Project](#about-the-project)
 - [Contributors](#contributors)
 - [Technologies Used](#technologies-used)
-- [Applications in Use](#applications-in-use)
+- [Application in Use](#application-in-use)
 - [Instructions on Use](#instructions-on-use)
 - [Deploy Link](#deploy-link)
 
