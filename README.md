@@ -4,6 +4,7 @@
 - [About the Project](#about-the-project)
 - [Contributors](#contributors)
 - [Technologies Used](#technologies-used)
+- [Applications in Use](#Applications-in-use)
 - [Instructions on Use](#instructions-on-use)
 - [Deploy Link](#deploy-link)
 
@@ -23,7 +24,7 @@ You can store and delete palettes as you find one that suits what you are lookin
 - CSS
 
 #### Application in use
-This is out application is use, feel free to check it out yourself.
+This is our application is use, feel free to check it out yourself.
 <img width="1429" alt="Screen Shot 2022-02-28 at 3 17 31 PM" src="https://user-images.githubusercontent.com/92230099/156074946-8a112267-f5e3-421a-b65e-7b02e51f6e0b.png">
 
 #### Instructions on Use
