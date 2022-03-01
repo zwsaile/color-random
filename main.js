@@ -70,7 +70,7 @@ function deletePalette(id) {
 };
 
 function changeLockIcon(event) {
-  if (event.target.src === "./assets/unlock-padlock.png") {
-    event.target.src = "./padlock.png"
-  }
+  if (event.target.src !== "./assets/padlock.png") {
+      event.target.src = "./assets/padlock.png"
+   }
 }
